@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My React App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PTE Practice Recorder</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="root"></div>
-  <!-- Load React + Babel (only for small demos, not production) -->
-  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <!-- Your JSX file -->
-  <script type="text/babel" src="index.jsx"></script>
+  <div class="app-container">
+    <h1>PTE Practice Recorder</h1>
+    
+    <div class="controls">
+      <button id="startBtn">Start Recording</button>
+      <button id="stopBtn" disabled>Stop Recording</button>
+      <button id="playBtn" disabled>Play</button>
+    </div>
+
+    <p id="status">Click start to begin recording.</p>
+    
+    <audio id="audioPlayback" controls></audio>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
